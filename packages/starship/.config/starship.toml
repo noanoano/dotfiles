@@ -26,15 +26,16 @@ $docker_context\
 $conda\
 $pixi\
 [](fg:color_bg5)\
-$line_break$character"""
-
-right_format = """
+$fill\
 [](fg:color_bg5)\
 $time\
 [](fg:color_bg4 bg:color_bg5)\
 $status\
 $cmd_duration\
-"""
+$line_break$character"""
+
+#right_format = """
+#"""
 
 palette = 'gruvbox_dark'
 
@@ -104,9 +105,12 @@ symbol = ""
 style = "bg:color_bg5"
 format = '[[ $symbol( $context) ](fg:color_fg3 bg:color_bg5)]($style)'
 
+[fill]
+symbol = " "
+
 [time]
 disabled = false
-time_format = "%R"
+time_format = "%T"
 style = "bg:color_bg5"
 format = '[[  $time ](fg:color_fg3 bg:color_bg5)]($style)'
 
