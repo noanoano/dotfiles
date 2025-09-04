@@ -1,0 +1,11 @@
+# ignore all
+/*
+/.**
+
+!/.Brewfile
+!/Makefile
+!/packages/
+!/packages/**
+
+!/.gitignore
+!/README.md

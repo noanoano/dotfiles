@@ -1,0 +1,29 @@
+[general]
+import = ["~/.config/alacritty/colors/kurolette.toml"]
+
+[window]
+opacity = 0.9
+decorations = "buttonless"
+padding = { x = 8, y = 8 }
+dimensions = { columns = 200, lines = 60 }
+startup_mode = "Maximized"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "HackGen Console NF"
+style = "Regular"
+
+[font.bold]
+family = "HackGen Console NF"
+style = "Bold"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[terminal.shell]
+program = "/opt/homebrew/bin/fish"
+args = ["-l", "-c", "tmux has-session -t default 2>/dev/null; and tmux attach -t default; or tmux new-session -d -s default -n main \\; source-file ~/.config/tmux/default.session.conf \\; attach -t default"]
+

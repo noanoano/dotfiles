@@ -1,0 +1,52 @@
+[colors.primary]
+background = "#211816" # Kurolette ダークブラウン背景
+foreground = "#F0EFFF" # Kurolette 薄い紫がかった白
+
+[colors.cursor]
+text   = "#211816"  # 背景色
+cursor = "#E879F9"  # 明るいピンクパープル
+
+[colors.selection]
+text       = "#000000"  # 黒文字
+background = "#DA70D6"  # ネオンオーキッド選択背景
+
+[colors.search.matches]
+foreground = "#F0EFFF"  # 白文字
+background = "#9370DB"  # ミディアムパープル（通常の検索）
+
+[colors.search.focused_match]
+foreground = "#000000"  # 黒文字
+background = "#C026D3"  # ホットピンクパープル（現在の検索）
+
+[colors.hints.start]
+foreground = "#000000"  # 黒文字
+background = "#B19CD9"  # 薄いラベンダー
+
+[colors.hints.end]
+foreground = "#000000"  # 黒文字
+background = "#9A73F3"  # アクセントパープル
+
+[colors.vi_mode_cursor]
+text   = "#211816"  # 背景色
+cursor = "#DA70D6"  # ネオンオーキッド
+
+# ここから 16 色（normal/bright）- Kurolette テーマ
+[colors.normal]
+black   = "#211816"  # ダークブラウン背景
+red     = "#E879F9"  # 紫ピンク（エラー色）
+green   = "#A855F7"  # 紫（成功色）
+yellow  = "#DDD6FE"  # 薄い紫クリーム
+blue    = "#8B5FBD"  # 紫寄りブルー
+magenta = "#DA70D6"  # ネオンオーキッド
+cyan    = "#B19CD9"  # 薄いラベンダー
+white   = "#F0EFFF"  # 薄い紫がかった白
+
+[colors.bright]
+black   = "#6B6B6B"  # グレー（コメント色）
+red     = "#EA76DD"  # より明るいピンク
+green   = "#C084FC"  # ソフトパープル
+yellow  = "#E879F9"  # 明るいパープルピンク
+blue    = "#9370DB"  # ミディアムパープル
+magenta = "#E879F9"  # 明るいピンクパープル
+cyan    = "#F0ABFC"  # ソフトピンクパープル
+white   = "#FFFFFF"  # 純白

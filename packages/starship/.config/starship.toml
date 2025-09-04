@@ -1,0 +1,140 @@
+# エディターの補完を設定スキーマに合わせて取得
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[ ](bg:color_bg1)\
+$os\
+$username\
+[](fg:color_bg1 bg:color_bg2)\
+$directory\
+[](fg:color_bg2 bg:color_bg3)\
+$git_branch\
+$git_status\
+[](fg:color_bg3 bg:color_bg4)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_bg4 bg:color_bg5)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_bg5)\
+$line_break$character"""
+
+right_format = """
+[](fg:color_bg5)\
+$time\
+[](fg:color_bg4 bg:color_bg5)\
+$status\
+$cmd_duration\
+"""
+
+palette = 'gruvbox_dark'
+
+[palettes.gruvbox_dark]
+color_bg1 = "#DCD6FB"
+color_bg2 = "#AEA5DA"
+color_bg3 = "#8379B5"
+color_bg4 = "#594E91"
+color_bg5 = "#632BAC"
+color_fg1 = "#000000"
+color_fg2 = "#FFFFFF"
+color_fg3 = "#D6BFD8"
+color_accent1 = "#E7ABC7"
+color_accent2 = "#79BFBD"
+color_accent3 = "#BD407D"
+color_accent4 = "#F8EEBC"
+color_accent5 = "#AFF3D8"
+color_accent6 = "#F8BED5"
+
+[os]
+disabled = false
+style = "bg:color_bg1 fg:color_fg1"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Macos = "󰀵"
+Linux = "󰌽"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+
+[username]
+show_always = true
+style_user = "bg:color_bg1 fg:color_fg1"
+style_root = "bg:color_bg1 fg:color_fg1"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_fg1 bg:color_bg2"
+format = "[   $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+truncate_to_repo = true
+
+[git_branch]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol $branch ](fg:color_fg1 bg:color_bg3)]($style)'
+
+[git_status]
+style = "bg:color_bg3"
+format = '[[($all_status$ahead_behind )](fg:color_fg1 bg:color_bg3)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_bg4"
+format = '[[ $symbol( $version) ](fg:color_fg2 bg:color_bg4)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg5"
+format = '[[ $symbol( $context) ](fg:color_fg3 bg:color_bg5)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_bg5"
+format = '[[  $time ](fg:color_fg3 bg:color_bg5)]($style)'
+
+[cmd_duration]
+show_milliseconds = true
+format = "[ 󰾆 $duration ]($style)"
+style = "fg:color_accent4 bg:color_bg4"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+min_time = 0
+
+[status]
+style = "fg:color_accent5 bg:color_bg4"
+format = '[$symbol]($style)'
+disabled = false
+success_symbol = "[  ]($style)"
+symbol = "[  $status $common_meaning](bold fg:color_accent6 bg:color_bg4)"
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[   ╰── ](bold fg:color_accent2)'
+error_symbol = '[   ╰── ](bold fg:color_accent1)'
+vimcmd_symbol = '[  ──╯ ](bold fg:color_accent2)'
+vimcmd_replace_one_symbol = '[  ──╯ ](bold fg:color_accent3)'
+vimcmd_replace_symbol = '[  ──╯ ](bold fg:color_accent3)'
+vimcmd_visual_symbol = '[  ──╯ ](bold fg:color_accent4)'
+
