@@ -1,0 +1,45 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.TemporaryItems
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# WSL
+*Zone.Identifier
+
+# エディタ/IDE
+*.swp
+*.swo
+*.swn
+*.un~
+.nvimlog
+.vscode/
+
+# ログ・一時ファイルなど
+*.log
+*.tmp
+*.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 環境変数や機密情報など
+.env
+.env.*
+.secrets
+*.key
+*.pem
+*.crt
+
+# その他開発用
+# hogehoge.local.py みたいなのはローカル開発用とする
+*.local.*
+*.dev.*
+

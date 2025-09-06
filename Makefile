@@ -1,7 +1,7 @@
 # macOS の BSD make
 SHELL := /bin/sh
 DOTFILES_DIR ?= $(HOME)/dotfiles
-PACKAGES ?= fish starship alacritty nvim tmux
+PACKAGES ?= fish starship alacritty nvim tmux git
 
 say  = printf '\033[1;32m==>\033[0m %s\n' "$(1)"
 warn = printf '\033[1;33m[WARN]\033[0m %s\n' "$(1)"
